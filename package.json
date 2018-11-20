@@ -4,16 +4,18 @@
   "//3": "updating this file will download and update your packages",
   "name": "my-hyperdev-app",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Using forismatic to generate quotes",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.4",
+    "unirest": "^0.5.1",
+    "lowdb": "^1.0.0"
   },
   "engines": {
-    "node": "8.x"
+    "node": "8.0.0"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,8 @@
   "keywords": [
     "node",
     "hyperdev",
-    "express"
+    "express",
+    "unirest"
   ],
   "license": "MIT"
 }

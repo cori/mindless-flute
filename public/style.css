@@ -1,47 +1,134 @@
-/* styles */
+  /* styles */
 /* called by your view template */
-
 /* You might want to try something fancier: */
 /* less: http://lesscss.org/ */
+/*
+.module {
+margin: 10px;
+width: 600px;
+height: 800px;
+float: left;
+background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/shoes.jpg);
+background-size: cover;
+}
+.darken {
+background-image: 
+linear-gradient(
+rgba(0, 0, 0, 0.5),
+rgba(0, 0, 0, 0.5)
+),
+url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/shoes.jpg);
+}
+*/
+header { 
+  background-color: wheat;
+  font-size: .75rem;
+}
+footer {
+  /*background-color: darkorange; */
+  /*margin-top: 50px; */
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+footer > a {
+  /*color: #BBBBBB; */
+  color: darkorange;
+}
+.nicejob {
+  text-decoration: line-through;
+}
+div#share>a, a.noscr{
+  float:left;
+  display:block;
+  background:url(https://cdn.gomix.com/bf1bd29b-8d14-43b2-86cb-cb2a443cab08%2FtwitterIcons.png) no-repeat;
+  width:20px;
+  height:20px;
+  margin-top:10px;
+  outline:none
+}
+a#t {
+  background-position:0 -1px !important;
+}
+a#t:hover {
+  background-position:0 -21px !important
+}
+a#vk {
+  background-position:1px -41px !important;
+  margin:6px 6px 0 0
+}
+a#vk:hover {
+  background-position:1px -61px !important
+}
+a#f {
+  background-position:1px -81px !important;
+}
+a#f:hover {
+  background-position:1px -101px !important
+}
+a#quote:hover {
+  color: darkorange;  
+  font-style: normal;  
+}
+a#quote {
+  color: black;  
+  /*font-weight: bolder; */
+  text-decoration: none; /* no underline */
+}
+.quote { 
+  font-size: 18px; 
+  background-color: ivory;
+  padding: 3px;
+  font-style: italic;
+  /*font-family: Consolas, monaco, monospace;*/
+  /*font-family: "Arial Narrow", Arial, sans-serif;*/
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  /*font-family: Roboto; */
+}
+
+#quotestream ul:first-child .quote {
+  font-size: 32px;
+  background-color: ghostwhite;
+  border: 3px dotted olive;
+  font-style: normal;
+}
+
+#quotestream ul:first-child .quote:hover {
+  border: 4px solid lime;
+  font-style: italic;
+}
+
+body {
+  background-color: beige;
+  /*background-image: url("http://blog-imgs-92.fc2.com/s/l/o/slorakusyou/hate.jpg");*/
+}
 
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 25px;
+  margin: 20px;
 }
-
+li { background: white; }
+li:nth-child(odd) { background: silver; }
 h1 {
-  font-weight: bold;
-  color: pink;
-}
-
-.bold {
-  font-weight: bold;
+  /*font-weight: bold; */
+  font-size: 1.2em;
+  color: darkorange;
 }
 
 p {
   max-width: 600px;
 }
-
-main {
-  display: flex;
-}
-
 form {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   padding: 15px;
   background-color: cyan;
-  color: rebeccapurple;
   display: inline-block;
   width: 100%;
   max-width: 340px;
   border-radius: 3px;
-  border-right: 2px solid gray;
 }
-
 input {
   display: block;
   margin-bottom: 10px;
@@ -51,7 +138,6 @@ input {
   border-radius: 3px;
   font-size: 16px;
 }
-
 button {
   font-size: 16px;
   border-radius: 3px;
@@ -60,29 +146,21 @@ button {
   box-shadow: 2px 2px teal;
   cursor: pointer;
 }
-
 button:hover {
   background-color: yellow;
 }
-
 button:active {
   box-shadow: none;
 }
-
-li {
-  margin-bottom: 5px;
+il {
+  /*margin-bottom: 2px;*/
+  font-size: small;
 }
 
-footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
+ul { 
+  padding: 2px;
 }
 
-footer > a {
-  color: #BBBBBB;
-}
-
-.nicejob {
-  text-decoration: line-through;
+blockquote { 
+  margin: 16px;
 }

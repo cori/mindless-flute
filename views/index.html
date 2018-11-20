@@ -1,75 +1,76 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Glitch support tools</title>
-    <meta name="description" content="Tools for supporting Glitch users">
-    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <title> Random Quote Generator</title>
+    <meta name="description" content="Generating Quotes using Forismatic API">
+    <link id="favicon" rel="icon" href="https://bit.ly/geniusIcon" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <header>
-      <h1>
-        The tools of tomorrow, today!
-      </h1>
+      <p>
+        <a href="https://github.com/kgashok/fccQuote/issues/new" target="_">Issues?</a>; last <a href="https://github.com/kgashok/fccQuote/commits/glitch" target = "_">checkin</a>
+        or <a href="https://saythanks.io/to/kgashok" target="_"> 
+        <button class="button"> Say Thanks! </button> </a>
+      </p>
     </header>
-
+    <fb:login-button scope="public_profile,user_friends" autologoutlink="true" onlogin="OnRequestPermission();">  
+    </fb:login-button>
+    <div id="fb-root"></div>
     <main>
-    
-      <form id="suspend">
-        <h2>Suspend Project</h2>
-        <label>
-          <h3>Domain or Id</h3>
-          <input type="text" name="domain">
-        </label>
-        <label>
-          <h3>Reason (displayed to user)</h3>
-          <input type="text" name="reason" value="Excessive resource utilization">
-        </label>
-        <button>Suspend</button>
+      <h1>
+        RANDOM QUOTE GENERATOR 
+      </h1>
+      <section class="whoami">
+        <ul id="whoami">
+        </ul>
+      </section>
+      <form>
+        <input id="uNumber" type="text" maxlength="100" placeholder="902311">
+        <button id="quoteButton" type="submit">Get Quote!</button>
       </form>
-  
-      <form id="unsuspend">
-        <h2>Unsuspend Project</h2>
-        <label>
-          <h3>Domain or Id</h3>
-          <input type="text" name="domain">
-        </label>
-        <button>Restore</button>
-      </form>
-
-      <form id="delete-custom-domain">
-        <h2>Delete Custom Domain (from project_cnames AND fly.io)</h2>
-        <label>
-          <h3>Project Id</h3>
-          <input type="text" name="project_id">
-        </label>
-        <label>
-          <h3>Custom Domain</h3>
-          <input type="text" name="domain">
-        </label>
-        <button>Delete Custom Domain</button>
-      </form>
-
-<!--       <form id="add-custom-domain">
-        <h2>Unsuspend Project</h2>
-        <label>
-          <h3>Domain or Id</h3>
-          <input type="text" name="domain">
-        </label>
-        <button>Restore</button>
-      </form>
- -->
+      <button type="submit" onclick="clearTheBox()">Reset (on the server!)</button>
+      <section class="responses">
+        <ul id="quotestream">
+        </ul>
+      </section>
     </main>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
-
+    <footer>
+      <p>
+        <il>1. Click on the <b>author</b> to get more information on Wikipedia  </il><br>
+        <il>2. Click anywhere on the <strong>quote</strong> to generate a printable version </il><br>
+        <il>3. Hover over and click on the corresponding Twitter icon to tweet! </il><hr>
+      </p>
+    <a href="http://edu.kgisl.com" target="_">Come hack your genius!</a>
+    <hr>
+    <div
+         class="fb-like"
+         data-share="true"
+         data-width="450"
+         data-show-faces="true">
+    </div>
+    </footer>
+  <!-- include the Glitch button to show what the webpage is about and
+to make it easier for folks to view source and remix -->
+  <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+  <script src="https://button.glitch.me/button.js"></script>
+  <!-- Your web-app is https, so your scripts need to be too -->
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+          integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+          crossorigin="anonymous">
+  </script>
+  <script src="/client.js"></script>
+  <script src="/fbg.js"></script>
   </body>
 </html>
